@@ -1,0 +1,27 @@
+{
+  "name": "british-auction-rfq-backend",
+  "version": "1.0.0",
+  "description": "Backend for British Auction RFQ System",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": ["auction", "rfq", "nodejs", "express"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.5.0",
+    "dotenv": "^16.3.1",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^8.5.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "validator": "^13.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
