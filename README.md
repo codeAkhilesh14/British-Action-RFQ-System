@@ -207,7 +207,7 @@ British Auction RFQ System/
 
 ## 2. RFQ Model
 
-```
+```js
 {
   title: {
     type: String,
@@ -248,7 +248,7 @@ British Auction RFQ System/
 
 ## 3. Bid Model
 
-```
+```js
 {
   rfq: {
     type: ObjectId,
