@@ -174,6 +174,37 @@ British Auction RFQ System/
 
    The frontend will run on `http://localhost:5173`
 
+# Database Models (MongoDB + Mongoose)
+
+## 1. User Model
+
+```js
+{
+  name: {
+    type: String,
+    required: true
+  },
+
+  email: {
+    type: String,
+    required: true,
+    unique: true
+  },
+
+  password: {
+    type: String,
+    required: true
+  },
+
+  role: {
+    type: String,
+    enum: ["buyer", "supplier", "admin"],
+    default: "supplier"
+  }
+}
+
+```
+
 ## 📡 API Endpoints
 
 ### Authentication Routes
