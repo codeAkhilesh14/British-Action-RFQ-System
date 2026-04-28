@@ -205,6 +205,77 @@ British Auction RFQ System/
 
 ```
 
+## 2. RFQ Model
+
+```
+{
+  title: {
+    type: String,
+    required: true
+  },
+
+  description: {
+    type: String,
+    required: true
+  },
+
+  buyer: {
+    type: ObjectId,
+    ref: "User"
+  },
+
+  startTime: Date,
+
+  endTime: Date,
+
+  forcedEndTime: Date,
+
+  currentEndTime: Date,
+
+  lowestBid: {
+    type: Number,
+    default: null
+  },
+
+  status: {
+    type: String,
+    enum: ["active", "closed", "force_closed"],
+    default: "active"
+  }
+}
+
+```
+
+## 3. Bid Model
+
+```
+{
+  rfq: {
+    type: ObjectId,
+    ref: "RFQ"
+  },
+
+  supplier: {
+    type: ObjectId,
+    ref: "User"
+  },
+
+  amount: {
+    type: Number,
+    required: true
+  },
+
+  status: {
+    type: String,
+    enum: ["active", "outbid", "won"],
+    default: "active"
+  },
+
+  message: String
+}
+
+```
+
 ## 📡 API Endpoints
 
 ### Authentication Routes
